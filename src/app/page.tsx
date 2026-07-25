@@ -17,7 +17,6 @@ const Education = dynamic(() => import("@/sections/education"), { ssr: false });
 const Testimonials = dynamic(() => import("@/sections/testimonials"), { ssr: false });
 const Achievements = dynamic(() => import("@/sections/achievements"), { ssr: false });
 const TechStack = dynamic(() => import("@/sections/tech-stack"), { ssr: false });
-const GitHubActivity = dynamic(() => import("@/sections/github-activity"), { ssr: false });
 const Blog = dynamic(() => import("@/sections/blog"), { ssr: false });
 const FAQ = dynamic(() => import("@/sections/faq"), { ssr: false });
 const Contact = dynamic(() => import("@/sections/contact"), { ssr: false });
@@ -42,7 +41,6 @@ export default function Home() {
         <Testimonials />
         <Achievements />
         <TechStack />
-        <GitHubActivity />
         <Blog />
         <FAQ />
         <Team />

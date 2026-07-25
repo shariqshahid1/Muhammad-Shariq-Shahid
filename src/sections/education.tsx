@@ -13,7 +13,7 @@ export default function Education() {
       <div className="container mx-auto px-4">
         <SectionHeading title="Education" subtitle="My academic background and certifications" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 mt-8 sm:mt-12">
           <div>
             <div className="flex items-center gap-3 mb-8">
               <GraduationCap className="w-6 h-6 text-primary" />

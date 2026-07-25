@@ -15,9 +15,9 @@ export default function SectionHeading({ title, subtitle, centered = true }: Sec
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}
-      className={`mb-16 ${centered ? "text-center" : ""}`}
+      className={`mb-10 md:mb-16 ${centered ? "text-center" : ""}`}
     >
-      <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
         {title.split(" ").map((word, i) => {
           const isLast = i === title.split(" ").length - 1;
           return (

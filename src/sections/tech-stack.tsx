@@ -28,7 +28,7 @@ export default function TechStack() {
           title="Tech Stack"
           subtitle="Technologies I work with daily"
         />
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-4">
           {TECH_STACK.map((tech, index) => {
             const IconComponent = getIconComponent(tech.icon)
             return (
@@ -40,7 +40,7 @@ export default function TechStack() {
                 transition={{ delay: index * 0.05 }}
                 whileHover={{ y: -5, scale: 1.05 }}
                 className={cn(
-                  "bg-card border border-border rounded-xl p-6 flex flex-col items-center justify-center gap-3",
+                  "bg-card border border-border rounded-xl p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center gap-3",
                   "hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
                 )}
               >

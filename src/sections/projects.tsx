@@ -39,6 +39,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="section-padding relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHeading
         title="Featured Projects"
         subtitle="A selection of my recent work"
@@ -73,7 +74,7 @@ export default function Projects() {
               transition={{ duration: 0.3 }}
               className="rounded-2xl overflow-hidden bg-card border border-border group"
             >
-              <div className="relative h-56 overflow-hidden bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20">
+              <div className="relative h-40 sm:h-56 overflow-hidden bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-6xl font-bold text-foreground/10 select-none group-hover:scale-110 transition-transform duration-300">
                     {getInitials(project.title)}
@@ -99,7 +100,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <span className="text-xs font-medium text-primary bg-primary/10 rounded-full px-3 py-1 mb-3 inline-block capitalize">
                   {project.category}
                 </span>
@@ -131,6 +132,7 @@ export default function Projects() {
             </motion.div>
           ))}
         </AnimatePresence>
+      </div>
       </div>
     </section>
   )

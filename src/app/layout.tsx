@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Shariq Shahid Ismail | Full Stack Web Developer",
+  title: "Muhammad Shariq Shahid | Full Stack Web Developer",
   description:
     "Crafting digital experiences with clean code and creative design. Full Stack Web Developer specializing in React, Next.js, Node.js, and modern web technologies.",
   keywords: [
@@ -24,21 +24,21 @@ export const metadata: Metadata = {
     "TypeScript",
     "Node.js",
     "Portfolio",
-    "Muhammad Shariq Shahid Ismail",
+    "Muhammad Shariq Shahid",
   ],
-  authors: [{ name: "Muhammad Shariq Shahid Ismail" }],
+  authors: [{ name: "Muhammad Shariq Shahid" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://muhammadshariq.dev",
-    title: "Muhammad Shariq Shahid Ismail | Full Stack Web Developer",
+    title: "Muhammad Shariq Shahid | Full Stack Web Developer",
     description:
       "Crafting digital experiences with clean code and creative design.",
-    siteName: "Muhammad Shariq Shahid Ismail Portfolio",
+    siteName: "Muhammad Shariq Shahid Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Shariq Shahid Ismail | Full Stack Web Developer",
+    title: "Muhammad Shariq Shahid | Full Stack Web Developer",
     description:
       "Crafting digital experiences with clean code and creative design.",
   },
@@ -54,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} dark`} suppressHydrationWarning>
       <body className="min-h-screen bg-background text-foreground antialiased">
         {children}
       </body>

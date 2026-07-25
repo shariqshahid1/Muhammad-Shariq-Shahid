@@ -10,9 +10,10 @@ import { cn, formatDate } from "@/lib/utils";
 export default function Blog() {
   return (
     <section id="blog" className="section-padding relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHeading title="Blog" subtitle="Latest articles and insights" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {BLOG_POSTS.map((post, index) => (
           <motion.div
             key={post.slug}
@@ -51,6 +52,7 @@ export default function Blog() {
             </GlowCard>
           </motion.div>
         ))}
+      </div>
       </div>
     </section>
   );

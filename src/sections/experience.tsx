@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 export default function Experience() {
   return (
     <section id="experience" className="section-padding relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHeading title="Experience" subtitle="My professional journey" />
 
       <div className="relative max-w-4xl mx-auto">
@@ -34,7 +35,7 @@ export default function Experience() {
             >
               <div className="absolute left-6 md:left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background z-10" />
 
-              <div className="bg-card border border-border rounded-2xl p-6">
+              <div className="bg-card border border-border rounded-2xl p-4 sm:p-6">
                 <h3 className="text-lg font-bold text-foreground">
                   {experience.company}
                 </h3>
@@ -73,6 +74,7 @@ export default function Experience() {
             </motion.div>
           );
         })}
+      </div>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { useTheme } from "next-themes";
+import { useTheme } from "@/components/providers/theme-provider";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sun, Moon, Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/constants";
@@ -12,7 +12,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("");
-  const { theme, setTheme } = useTheme();
+  const { theme, toggle: setTheme } = useTheme();
   const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -67,7 +67,7 @@ export default function Navbar() {
           <div className="flex h-16 items-center justify-between">
             <Link
               href="/"
-              className="text-xl font-bold tracking-tight"
+              className="text-lg sm:text-xl font-bold tracking-tight truncate max-w-[140px] sm:max-w-none"
               onClick={(e) => {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: "smooth" });
@@ -75,7 +75,7 @@ export default function Navbar() {
             >
               Muhammad{" "}
               <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Shariq Shahid Ismail
+                Shariq Shahid
               </span>
             </Link>
 
@@ -105,7 +105,7 @@ export default function Navbar() {
 
             <div className="flex items-center gap-3">
               <button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                onClick={() => setTheme()}
                 className="flex h-9 w-9 items-center justify-center rounded-lg transition-colors hover:bg-accent"
                 aria-label="Toggle theme"
               >
@@ -142,7 +142,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 bottom-0 z-50 w-72 bg-background border-l border-border p-6 md:hidden"
+              className="fixed top-0 right-0 bottom-0 z-50 w-64 sm:w-72 bg-background border-l border-border p-5 sm:p-6 md:hidden"
             >
               <div className="flex justify-end mb-8">
                 <button

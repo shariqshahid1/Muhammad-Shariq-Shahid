@@ -63,7 +63,7 @@ export default function Skills() {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
           <AnimatePresence mode="popLayout">
             {filteredSkills.map((skill, index) => (
               <motion.div
@@ -74,7 +74,7 @@ export default function Skills() {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="bg-card border border-border rounded-xl p-5 hover:border-primary/30 transition-colors duration-200">
+                <div className="bg-card border border-border rounded-xl p-3 sm:p-5 hover:border-primary/30 transition-colors duration-200">
                   <span className="font-semibold text-foreground">
                     {skill.name}
                   </span>

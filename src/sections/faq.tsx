@@ -16,7 +16,7 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="section-padding relative">
-      <HelpCircle className="text-primary/5 absolute top-20 right-10 w-72 h-72 pointer-events-none" />
+      <HelpCircle className="text-primary/5 absolute top-20 right-10 w-72 h-72 pointer-events-none hidden md:block" />
 
       <div className="container mx-auto px-4">
         <SectionHeading title="FAQ" subtitle="Frequently asked questions" />
@@ -36,7 +36,7 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => toggle(index)}
-                  className="w-full flex items-center justify-between p-5 text-left cursor-pointer"
+                  className="w-full flex items-center justify-between p-4 sm:p-5 text-left cursor-pointer"
                 >
                   <span className="font-medium text-foreground pr-4">
                     {faq.question}
@@ -59,7 +59,7 @@ export default function FAQ() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <p className="px-5 pb-5 text-muted text-sm leading-relaxed">
+                      <p className="px-4 sm:px-5 pb-4 sm:pb-5 text-muted text-sm leading-relaxed">
                         {faq.answer}
                       </p>
                     </motion.div>

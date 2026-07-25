@@ -14,8 +14,8 @@ import {
 } from "@/types";
 
 export const SITE_CONFIG = {
-  name: "Muhammad Shariq Shahid Ismail",
-  title: "Muhammad Shariq Shahid Ismail | Full Stack Web Developer",
+  name: "Muhammad Shariq Shahid",
+  title: "Muhammad Shariq Shahid | Full Stack Web Developer",
   description:
     "Crafting digital experiences with clean code and creative design. Full Stack Web Developer specializing in React, Next.js, Node.js, and modern web technologies.",
   url: "https://muhammadshariq.dev",
@@ -193,7 +193,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "CTO",
     company: "TechNova Inc.",
     avatar: "/images/avatar1.jpg",
-    content: "Muhammad Shariq Shahid Ismail is one of the most talented developers I've worked with. His ability to translate complex requirements into elegant solutions is remarkable. He delivered our analytics platform 2 weeks ahead of schedule.",
+    content: "Muhammad Shariq Shahid is one of the most talented developers I've worked with. His ability to translate complex requirements into elegant solutions is remarkable. He delivered our analytics platform 2 weeks ahead of schedule.",
     rating: 5,
   },
   {

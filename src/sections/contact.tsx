@@ -18,20 +18,28 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setTimeout(() => {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, subject, message }),
+      });
+      if (res.ok) {
+        setIsSubmitted(true);
         setName("");
         setEmail("");
         setSubject("");
         setMessage("");
-        setIsSubmitted(false);
-      }, 3000);
-    }, 2000);
+        setTimeout(() => setIsSubmitted(false), 3000);
+      }
+    } catch {
+      // silent fail
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactDetails = [
@@ -53,14 +61,14 @@ export default function Contact() {
         subtitle="Let's work together on your next project"
       />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-5">
+        <div className="grid gap-6 sm:gap-8 md:gap-12 lg:grid-cols-5">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="lg:col-span-2"
           >
-            <GlowCard className="p-8">
+            <GlowCard className="p-6 sm:p-8">
               <h3 className="text-2xl font-bold mb-4">Let&apos;s talk</h3>
               <p className="text-muted text-sm mb-6">
                 I&apos;m always open to discussing new projects, creative ideas, or
@@ -96,7 +104,7 @@ export default function Contact() {
             viewport={{ once: true }}
             className="lg:col-span-3"
           >
-            <GlowCard className="p-8">
+            <GlowCard className="p-6 sm:p-8">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="text-sm font-medium text-foreground mb-2 block">

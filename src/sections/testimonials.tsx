@@ -47,7 +47,7 @@ export default function Testimonials() {
           </motion.button>
 
           <div className="relative w-full max-w-3xl overflow-hidden">
-            <Quote size={64} className="text-primary/20 mx-auto mb-6" />
+            <Quote size={48} className="text-primary/20 mx-auto mb-4 sm:mb-6 hidden sm:block" />
 
             <AnimatePresence mode="wait">
               <motion.div
@@ -56,7 +56,7 @@ export default function Testimonials() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.4 }}
-                className="bg-card border border-border rounded-2xl p-8 md:p-12"
+                className="bg-card border border-border rounded-2xl p-4 sm:p-6 md:p-8"
               >
                 <p className="text-sm sm:text-lg md:text-xl text-foreground/80 leading-relaxed italic mb-6">
                   &ldquo;{testimonial.content}&rdquo;

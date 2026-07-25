@@ -40,9 +40,9 @@ function StatCard({
   const { count, ref } = useAnimatedCounter(value);
 
   return (
-    <div ref={ref} className="bg-card border border-border rounded-2xl p-6 text-center">
-      <Icon className="w-12 h-12 mx-auto mb-3 text-primary" />
-      <div className="text-3xl font-bold text-foreground">
+    <div ref={ref} className="bg-card border border-border rounded-2xl p-4 sm:p-6 text-center">
+      <Icon className="w-8 h-8 sm:w-12 sm:h-12 mx-auto mb-2 sm:mb-3 text-primary" />
+      <div className="text-2xl sm:text-3xl font-bold text-foreground">
         {count}
         {suffix}
       </div>
@@ -60,17 +60,17 @@ export default function About() {
           subtitle="Passionate about creating exceptional digital experiences"
         />
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative rounded-2xl overflow-hidden aspect-square max-w-md mx-auto border border-border/50"
+            className="relative rounded-2xl overflow-hidden aspect-square max-w-[250px] sm:max-w-md mx-auto border border-border/50"
           >
             <img
-              src="/shariq.jpeg"
-              alt="Muhammad Shariq Shahid Ismail"
+              src="/shariq.png"
+              alt="Muhammad Shariq Shahid"
               className="w-full h-full object-cover"
             />
           </motion.div>
@@ -81,7 +81,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-6">Who am I?</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6">Who am I?</h2>
 
             <p className="text-muted leading-relaxed mb-4">
               I&apos;m a Full Stack Web Developer with 2 years of experience
@@ -108,7 +108,7 @@ export default function About() {
         </div>
 
         <div className="mt-12">
-          <h2 className="text-2xl font-bold mb-6">My Journey</h2>
+          <h2 className="text-xl sm:text-2xl font-bold mb-6">My Journey</h2>
           <div className="relative">
             <div className="absolute left-0 top-0 bottom-0 w-px bg-border" />
             {timeline.map((item) => (
@@ -122,7 +122,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mt-12 sm:mt-16">
           {stats.map((stat) => (
             <StatCard key={stat.label} {...stat} />
           ))}

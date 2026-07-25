@@ -9,9 +9,9 @@ import SectionHeading from "@/components/ui/section-heading";
 
 const teamMembers = [
   {
-    name: "Muhammad Shariq Shahid Ismail",
+    name: "Muhammad Shariq Shahid",
     role: "Full Stack Web Developer",
-    avatar: "/shariq.jpeg",
+    avatar: "/shariq.png",
     github: "#",
     linkedin: "#",
     twitter: "#",
@@ -54,7 +54,7 @@ export default function Team() {
           subtitle="Meet the people behind the work"
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.name}
@@ -62,9 +62,9 @@ export default function Team() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="bg-card border border-border rounded-2xl p-8 text-center hover:border-primary/30 transition-colors duration-300 flex flex-col items-center"
+              className="bg-card border border-border rounded-2xl p-6 sm:p-8 text-center hover:border-primary/30 transition-colors duration-300 flex flex-col items-center"
             >
-              <div className="w-28 h-28 rounded-full overflow-hidden mb-5 border-2 border-border">
+              <div className="w-20 h-20 sm:w-28 sm:h-28 rounded-full overflow-hidden mb-4 sm:mb-5 border-2 border-border">
                 {member.avatar ? (
                   <img
                     src={member.avatar}
@@ -136,7 +136,7 @@ export default function Team() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="fixed inset-4 sm:inset-auto sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:w-full sm:max-w-lg z-50 bg-card border border-border rounded-2xl p-6 sm:p-8 overflow-y-auto max-h-[90vh]"
+              className="fixed inset-4 sm:inset-auto sm:left-1/2 sm:top-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2 sm:w-full sm:max-w-lg z-50 bg-card border border-border rounded-2xl p-4 sm:p-6 md:p-8 overflow-y-auto max-h-[85vh] sm:max-h-[90vh]"
             >
               <div className="flex justify-between items-start mb-6">
                 <div className="flex items-center gap-4">

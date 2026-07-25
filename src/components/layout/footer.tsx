@@ -26,17 +26,17 @@ export default function Footer() {
     <footer className="relative bg-gradient-to-b from-background to-background/80 border-t border-border">
       <div className="absolute inset-0 grid-bg opacity-30" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-16 pb-6 sm:pb-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-12 mb-8 sm:mb-12"
         >
           <div>
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4">
               <span className="text-foreground">Muhammad</span>{" "}
-              <span className="gradient-text">Shariq Shahid Ismail</span>
+              <span className="gradient-text">Shariq Shahid</span>
             </h3>
             <p className="text-muted text-sm leading-relaxed">
               Full Stack Web Developer crafting exceptional digital experiences with clean code and creative design.

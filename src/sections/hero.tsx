@@ -74,7 +74,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background z-[1]" />
       <div className="absolute inset-0 grid-bg z-[2]" />
 
-      <div className="absolute inset-0 z-[1] pointer-events-none">
+      <div className="absolute inset-0 z-[1] pointer-events-none hidden sm:block">
         <div className="w-96 h-96 bg-primary/20 rounded-full blur-3xl absolute -top-48 -left-48 animate-float" />
         <div
           className="w-72 h-72 bg-secondary/20 rounded-full blur-3xl absolute bottom-20 -right-36 animate-float"
@@ -86,7 +86,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center pt-20">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -101,18 +101,18 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight"
+          className="text-xl sm:text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight"
         >
           <span className="text-foreground">Hi, I&apos;m</span>
           <br />
-          <span className="gradient-text">Muhammad Shariq Shahid Ismail</span>
+          <span className="gradient-text">Muhammad Shariq Shahid</span>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="text-xl md:text-2xl text-muted mt-6"
+          className="text-lg sm:text-xl md:text-2xl text-muted mt-6"
         >
           <span>{displayedText}</span>
           <span
@@ -128,7 +128,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className="text-lg text-muted max-w-xl mx-auto mt-6"
+          className="text-base sm:text-lg text-muted max-w-xl mx-auto mt-6"
         >
           Crafting high-performance web applications with modern technologies.
           I turn complex problems into elegant, scalable solutions.
@@ -138,7 +138,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0 }}
-          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-10"
+          className="flex flex-col sm:flex-row gap-3 justify-center mt-8 sm:mt-10 px-2"
         >
           <MagneticButton variant="primary" href="#projects">
             <FolderOpen className="w-4 h-4" />
@@ -184,7 +184,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted"
       >
         <span className="text-xs">Scroll Down</span>
         <motion.div
