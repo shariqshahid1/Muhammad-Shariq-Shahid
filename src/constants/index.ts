@@ -19,8 +19,8 @@ export const SITE_CONFIG = {
   description:
     "Crafting digital experiences with clean code and creative design. Full Stack Web Developer specializing in React, Next.js, Node.js, and modern web technologies.",
   url: "https://muhammadshariq.dev",
-  email: "hello@muhammadshariq.dev",
-  phone: "+1 (555) 123-4567",
+  email: "shariqshahid610@gmail.com",
+  phone: "+92 3092105738",
   location: "Karachi, Pakistan",
   github: "https://github.com/muhammadshariq",
   linkedin: "https://linkedin.com/in/muhammadshariq",
@@ -35,6 +35,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
   { label: "Blog", href: "#blog" },
+  { label: "Team", href: "#team" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -152,37 +153,30 @@ export const PROJECTS: Project[] = [
 
 export const EXPERIENCES: Experience[] = [
   {
-    company: "TechNova Inc.",
-    role: "Full Stack Developer",
-    duration: "Jan 2023 - Present",
+    company: "K&H TECH SOL",
+    role: "Full Stack Web Developer",
+    duration: "2025 - Present",
     description:
-      "Leading a team of 6 developers building a SaaS analytics platform. Architected microservices infrastructure reducing server costs by 40%. Implemented real-time data processing pipeline handling 1M+ events daily.",
-    technologies: ["React", "Next.js", "Node.js", "AWS", "Docker", "PostgreSQL"],
+      "Working as a Full Stack Web Developer, building and maintaining web applications using modern technologies. Handling both frontend and backend development with a focus on performance and scalability.",
+    technologies: ["React", "Next.js", "Node.js", "TypeScript", "Tailwind CSS", "MongoDB"],
   },
   {
-    company: "CloudSync Labs",
-    role: "Junior Developer",
-    duration: "Mar 2021 - Dec 2022",
+    company: "Freelancing",
+    role: "Full Stack Web Developer",
+    duration: "2024 - Present",
     description:
-      "Developed and maintained 5 client-facing web applications. Built RESTful APIs serving 500K+ daily requests. Mentored 3 junior developers and established code review practices.",
-    technologies: ["Vue.js", "Node.js", "MongoDB", "Redis", "CI/CD"],
+      "Providing full stack web development services to clients worldwide. Building custom web applications, e-commerce platforms, and landing pages. Managing end-to-end project delivery from concept to deployment.",
+    technologies: ["React", "Next.js", "Node.js", "JavaScript", "Tailwind CSS", "PostgreSQL"],
   },
 ];
 
 export const EDUCATION: Education[] = [
   {
-    institution: "Stanford University",
-    degree: "Master of Science in Computer Science",
-    duration: "2015 - 2017",
-    description: "Specialized in Distributed Systems and Machine Learning. Thesis on 'Optimizing Real-time Data Pipelines with Edge Computing'.",
-    achievements: ["GPA: 3.9/4.0", "Dean's List", "Teaching Assistant for CS101"],
-  },
-  {
-    institution: "University of California, Berkeley",
-    degree: "Bachelor of Science in Computer Science",
-    duration: "2011 - 2015",
-    description: "Foundations in algorithms, data structures, and software engineering. Active member of the Web Development Club.",
-    achievements: ["GPA: 3.7/4.0", "Hackathon Winner x3", "ACM Scholarship Recipient"],
+    institution: "The Nation Public School",
+    degree: "Matric",
+    duration: "2026 - 2027 (Current)",
+    description: "Currently pursuing Matriculation with a focus on science subjects.",
+    achievements: [],
   },
 ];
 

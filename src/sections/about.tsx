@@ -8,14 +8,14 @@ import { useAnimatedCounter } from "@/hooks/use-animated-counter";
 
 const timeline = [
   {
-    role: "Full Stack Developer",
-    company: "TechNova Inc.",
-    duration: "2023-Present",
+    role: "Full Stack Web Developer",
+    company: "K&H TECH SOL",
+    duration: "2025-Present",
   },
   {
-    role: "Junior Developer",
-    company: "CloudSync Labs",
-    duration: "2021-2022",
+    role: "Full Stack Web Developer",
+    company: "Freelancing",
+    duration: "2024-Present",
   },
 ];
 
@@ -85,7 +85,7 @@ export default function About() {
 
             <p className="text-muted leading-relaxed mb-4">
               I&apos;m a Full Stack Web Developer with 2 years of experience
-              building scalable web applications. Based in Karachi, I work
+              building scalable web applications. Based in Pakistan, I work
               with startups and enterprises to deliver exceptional digital
               products.
             </p>

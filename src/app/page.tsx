@@ -21,6 +21,7 @@ const GitHubActivity = dynamic(() => import("@/sections/github-activity"), { ssr
 const Blog = dynamic(() => import("@/sections/blog"), { ssr: false });
 const FAQ = dynamic(() => import("@/sections/faq"), { ssr: false });
 const Contact = dynamic(() => import("@/sections/contact"), { ssr: false });
+const Team = dynamic(() => import("@/sections/team"), { ssr: false });
 const Footer = dynamic(() => import("@/components/layout/footer"), { ssr: false });
 
 export default function Home() {
@@ -44,6 +45,7 @@ export default function Home() {
         <GitHubActivity />
         <Blog />
         <FAQ />
+        <Team />
         <Contact />
       </main>
       <Footer />
