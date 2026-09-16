@@ -17,7 +17,7 @@ export default function Education() {
           <div>
             <div className="flex items-center gap-3 mb-8">
               <GraduationCap className="w-6 h-6 text-primary" />
-              <h3 className="text-2xl font-bold text-foreground">Education</h3>
+              <h3 className="text-xl font-bold text-foreground">Education</h3>
             </div>
 
             <div className="space-y-6">
@@ -30,7 +30,7 @@ export default function Education() {
                   transition={{ duration: 0.5, delay: index * 0.15 }}
                 >
                   <GlowCard className="p-6">
-                    <h4 className="text-lg font-bold text-foreground">{edu.institution}</h4>
+                    <h4 className="text-base font-bold text-foreground">{edu.institution}</h4>
                     <p className="text-primary font-medium">{edu.degree}</p>
                     <p className="text-sm text-muted mt-1">{edu.duration}</p>
                     <p className="text-sm text-muted mt-2">{edu.description}</p>
@@ -54,7 +54,7 @@ export default function Education() {
           <div>
             <div className="flex items-center gap-3 mb-8">
               <Award className="w-6 h-6 text-primary" />
-              <h3 className="text-2xl font-bold text-foreground">Certifications</h3>
+              <h3 className="text-xl font-bold text-foreground">Certifications</h3>
             </div>
 
             <div className="space-y-6">
@@ -66,14 +66,33 @@ export default function Education() {
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.5, delay: index * 0.15 }}
                 >
-                  <GlowCard className="p-6">
-                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-secondary rounded-full" />
+                  <GlowCard className="group relative flex items-start gap-4 p-5">
+                    <div
+                      className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5"
+                    >
+                      <Award className="w-6 h-6 text-primary" />
+                    </div>
 
-                    <h4 className="font-semibold text-foreground">{cert.name}</h4>
-                    <p className="text-sm text-primary">{cert.issuer}</p>
-                    <span className="text-xs text-muted bg-foreground/5 rounded-full px-2 py-0.5 inline-block mt-2">
-                      {cert.year}
-                    </span>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-start justify-between gap-3">
+                        <h4 className="font-semibold text-foreground leading-snug">{cert.name}</h4>
+                        <span className="text-xs text-muted bg-foreground/5 rounded-full px-2.5 py-1 flex-shrink-0 whitespace-nowrap">
+                          {cert.year}
+                        </span>
+                      </div>
+                      <p className="text-sm text-primary mt-1">{cert.issuer}</p>
+
+                      <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-300 ease-in-out">
+                        <div className="overflow-hidden">
+                          <p className="text-sm text-muted mt-3">
+                            {cert.description}
+                            <span className="mt-2 block text-xs font-medium text-primary">
+                              Certifications
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </GlowCard>
                 </motion.div>
               ))}

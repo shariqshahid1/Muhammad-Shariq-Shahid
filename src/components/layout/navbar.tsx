@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState<string>("");
+  const [activeSection, setActiveSection] = useState<string>("#home");
   const { theme, toggle: setTheme } = useTheme();
   const navRef = useRef<HTMLElement>(null);
 
@@ -45,6 +45,7 @@ export default function Navbar() {
 
   const scrollTo = (href: string) => {
     setIsOpen(false);
+    setActiveSection(href);
     const el = document.querySelector(href);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });

@@ -17,7 +17,7 @@ export default function SectionHeading({ title, subtitle, centered = true }: Sec
       transition={{ duration: 0.6 }}
       className={`mb-10 md:mb-16 ${centered ? "text-center" : ""}`}
     >
-      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
         {title.split(" ").map((word, i) => {
           const isLast = i === title.split(" ").length - 1;
           return (
@@ -32,7 +32,7 @@ export default function SectionHeading({ title, subtitle, centered = true }: Sec
         })}
       </h2>
       {subtitle && (
-        <p className="text-muted text-lg md:text-xl max-w-2xl mx-auto">
+        <p className="text-muted text-base md:text-lg max-w-2xl mx-auto">
           {subtitle}
         </p>
       )}

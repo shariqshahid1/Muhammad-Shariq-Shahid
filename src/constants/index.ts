@@ -5,7 +5,6 @@ import {
   Experience,
   Education,
   Testimonial,
-  BlogPost,
   FAQ,
   Service,
   Stat,
@@ -34,8 +33,6 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Services", href: "#services" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
-  { label: "Blog", href: "#blog" },
-  { label: "Team", href: "#team" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -62,6 +59,9 @@ export const SKILLS: Skill[] = [
   { name: "Docker", level: 80, icon: "docker", category: "devops" },
   { name: "AWS", level: 76, icon: "aws", category: "devops" },
   { name: "Git", level: 92, icon: "git", category: "tools" },
+  { name: "OpenAI", level: 88, icon: "openai", category: "ai" },
+  { name: "Gemini", level: 85, icon: "gemini", category: "ai" },
+  { name: "Claude", level: 84, icon: "claude", category: "ai" },
 ];
 
 export const PROJECTS: Project[] = [
@@ -181,10 +181,34 @@ export const EDUCATION: Education[] = [
 ];
 
 export const CERTIFICATES = [
-  { name: "AWS Solutions Architect Professional", issuer: "Amazon Web Services", year: "2023" },
-  { name: "Google Cloud Professional Developer", issuer: "Google", year: "2022" },
-  { name: "Meta Front-End Developer Professional", issuer: "Meta", year: "2021" },
-  { name: "MongoDB Certified Developer", issuer: "MongoDB Inc.", year: "2020" },
+  {
+    name: "AWS Solutions Architect Professional",
+    issuer: "Amazon Web Services",
+    year: "2023",
+    description:
+      "Validated expertise in designing and deploying scalable, highly available, and fault-tolerant systems on Amazon Web Services, including advanced networking, security, and cost optimization.",
+  },
+  {
+    name: "Google Cloud Professional Developer",
+    issuer: "Google",
+    year: "2022",
+    description:
+      "Demonstrated proficiency in building scalable, highly available applications using Google Cloud technologies, CI/CD pipelines, and cloud-native development best practices.",
+  },
+  {
+    name: "Meta Front-End Developer Professional",
+    issuer: "Meta",
+    year: "2021",
+    description:
+      "Completed an intensive program covering responsive UI design, JavaScript, React, version control, and modern front-end workflows through Meta's professional curriculum.",
+  },
+  {
+    name: "MongoDB Certified Developer",
+    issuer: "MongoDB Inc.",
+    year: "2020",
+    description:
+      "Proved hands-on knowledge of designing and querying MongoDB databases, data modeling, indexing, and building high-performance applications with MongoDB.",
+  },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
@@ -219,36 +243,6 @@ export const TESTIMONIALS: Testimonial[] = [
     avatar: "/images/avatar4.jpg",
     content: "I've hired many developers over my career, and Muhammad stands out for his clean code, thorough documentation, and ability to mentor team members. A true 10x developer.",
     rating: 5,
-  },
-];
-
-export const BLOG_POSTS: BlogPost[] = [
-  {
-    title: "Building Scalable Microservices with Next.js and Node.js",
-    excerpt:
-      "A deep dive into architecting microservices that scale. Learn how to break down monoliths, implement service discovery, and handle inter-service communication.",
-    category: "Architecture",
-    readTime: "8 min read",
-    date: "2024-01-15",
-    slug: "building-scalable-microservices",
-  },
-  {
-    title: "The Future of AI in Web Development",
-    excerpt:
-      "Exploring how AI tools are transforming the way we build web applications. From code generation to automated testing, AI is reshaping development workflows.",
-    category: "AI & Tech",
-    readTime: "6 min read",
-    date: "2024-01-08",
-    slug: "future-of-ai-web-development",
-  },
-  {
-    title: "Mastering TypeScript: Advanced Patterns and Best Practices",
-    excerpt:
-      "Level up your TypeScript skills with advanced patterns like discriminated unions, template literal types, and conditional types for building type-safe applications.",
-    category: "Tutorial",
-    readTime: "12 min read",
-    date: "2023-12-20",
-    slug: "mastering-typescript-patterns",
   },
 ];
 

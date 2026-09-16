@@ -69,7 +69,7 @@ export default function Contact() {
             className="lg:col-span-2"
           >
             <GlowCard className="p-6 sm:p-8">
-              <h3 className="text-2xl font-bold mb-4">Let&apos;s talk</h3>
+              <h3 className="text-xl font-bold mb-4">Let&apos;s talk</h3>
               <p className="text-muted text-sm mb-6">
                 I&apos;m always open to discussing new projects, creative ideas, or
                 opportunities to be part of your vision.

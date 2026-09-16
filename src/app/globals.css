@@ -218,6 +218,15 @@
     padding-bottom: 4rem;
   }
 
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
   @media (min-width: 640px) {
     .section-padding {
       padding-top: 5rem;

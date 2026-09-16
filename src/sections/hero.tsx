@@ -2,29 +2,20 @@
 
 import { motion } from "framer-motion";
 import {
-  ArrowDown,
   Download,
   Briefcase,
   FolderOpen,
 } from "lucide-react";
 import { SiGithub, SiX } from "react-icons/si";
 import { FaLinkedinIn } from "react-icons/fa";
-import dynamic from "next/dynamic";
 import MagneticButton from "@/components/ui/magnetic-button";
 import { SITE_CONFIG } from "@/constants";
 import { useState, useEffect } from "react";
 
-const HeroBackground = dynamic(
-  () => import("@/components/three/hero-background"),
-  { ssr: false }
-);
-
 const ROLES = [
-  "Full Stack Web Developer",
   "Frontend Developer",
   "Backend Developer",
-  "Database Developer",
-  "UI/UX Designer",
+  "Full Stack Web Developer",
 ];
 
 export default function Hero() {
@@ -45,7 +36,7 @@ export default function Hero() {
           setTimeout(() => {
             setIsDeleting(true);
             setIsPaused(false);
-          }, 2000);
+          }, 3000);
         }
       } else {
         setCharIdx((prev) => prev - 1);
@@ -68,23 +59,15 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      <div className="absolute inset-0 z-0">
-        <HeroBackground />
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background z-[1]" />
-      <div className="absolute inset-0 grid-bg z-[2]" />
-
-      <div className="absolute inset-0 z-[1] pointer-events-none hidden sm:block">
-        <div className="w-96 h-96 bg-primary/20 rounded-full blur-3xl absolute -top-48 -left-48 animate-float" />
-        <div
-          className="w-72 h-72 bg-secondary/20 rounded-full blur-3xl absolute bottom-20 -right-36 animate-float"
-          style={{ animationDelay: "2s" }}
-        />
-        <div
-          className="w-64 h-64 bg-accent/20 rounded-full blur-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-float"
-          style={{ animationDelay: "4s" }}
-        />
-      </div>
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5" />
+      <div
+        className="absolute inset-0 z-0 grid-bg opacity-60"
+        style={{
+          maskImage: "radial-gradient(ellipse at center, black 40%, transparent 75%)",
+          WebkitMaskImage: "radial-gradient(ellipse at center, black 40%, transparent 75%)",
+        }}
+      />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-background/30 to-background" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 text-center pt-20">
         <motion.div
@@ -93,7 +76,7 @@ export default function Hero() {
           transition={{ delay: 0.2 }}
         >
           <span className="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-2 text-sm mb-8">
-            Welcome to my portfolio
+            Let&apos;s build something great together
           </span>
         </motion.div>
 
@@ -101,28 +84,33 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="text-xl sm:text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight"
         >
-          <span className="text-foreground">Hi, I&apos;m</span>
-          <br />
+          <span className="text-foreground">Hi, I&apos;m </span>
           <span className="gradient-text">Muhammad Shariq Shahid</span>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="text-lg sm:text-xl md:text-2xl text-muted mt-6"
-        >
-          <span>{displayedText}</span>
-          <span
-            className={`inline-block ml-0.5 font-mono ${
-              isTypingDone ? "animate-blink" : ""
-            }`}
+        <div className="mt-6 flex items-center justify-center gap-2 text-lg sm:text-2xl md:text-3xl">
+          <span className="text-muted">I am</span>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.7 }}
+            className="relative inline-flex items-center font-bold text-foreground"
           >
-            |
-          </span>
-        </motion.div>
+            <span className="invisible whitespace-nowrap">Full Stack Web Developer</span>
+            <span className="absolute left-0 top-0 whitespace-nowrap">
+              <span className="gradient-text">{displayedText}</span>
+              <span
+                className={`inline-block ml-0.5 font-mono ${
+                  isTypingDone ? "animate-blink" : ""
+                }`}
+              >
+                |
+              </span>
+            </span>
+          </motion.div>
+        </div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -179,21 +167,6 @@ export default function Hero() {
           ))}
         </motion.div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.4 }}
-        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted"
-      >
-        <span className="text-xs">Scroll Down</span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-        >
-          <ArrowDown className="w-4 h-4" />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

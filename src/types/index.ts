@@ -61,15 +61,6 @@ export interface Testimonial {
   rating: number;
 }
 
-export interface BlogPost {
-  title: string;
-  excerpt: string;
-  category: string;
-  readTime: string;
-  date: string;
-  slug: string;
-}
-
 export interface FAQ {
   question: string;
   answer: string;

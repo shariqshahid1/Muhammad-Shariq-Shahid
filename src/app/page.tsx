@@ -15,12 +15,10 @@ const Projects = dynamic(() => import("@/sections/projects"), { ssr: false });
 const Experience = dynamic(() => import("@/sections/experience"), { ssr: false });
 const Education = dynamic(() => import("@/sections/education"), { ssr: false });
 const Testimonials = dynamic(() => import("@/sections/testimonials"), { ssr: false });
-const Achievements = dynamic(() => import("@/sections/achievements"), { ssr: false });
 const TechStack = dynamic(() => import("@/sections/tech-stack"), { ssr: false });
-const Blog = dynamic(() => import("@/sections/blog"), { ssr: false });
 const FAQ = dynamic(() => import("@/sections/faq"), { ssr: false });
 const Contact = dynamic(() => import("@/sections/contact"), { ssr: false });
-const Team = dynamic(() => import("@/sections/team"), { ssr: false });
+
 const Footer = dynamic(() => import("@/components/layout/footer"), { ssr: false });
 
 export default function Home() {
@@ -39,11 +37,8 @@ export default function Home() {
         <Experience />
         <Education />
         <Testimonials />
-        <Achievements />
         <TechStack />
-        <Blog />
         <FAQ />
-        <Team />
         <Contact />
       </main>
       <Footer />
